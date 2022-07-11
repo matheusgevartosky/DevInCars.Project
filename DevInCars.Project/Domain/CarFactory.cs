@@ -5,11 +5,12 @@ namespace DevInCars.Project.Domain;
 
 public class CarFactory : VehicleFactoryBase
 {
-    
-
-    public CarFactory(Guid chassisNumber, DateOnly manufacturingDate, string name, string plateNumber, double value, 
-        long buyerId, string color, double potency, FuelType fuelType, int? doorsNumber, VehicleStatus status) :
-        base(chassisNumber, manufacturingDate, name, plateNumber, value, buyerId, color, potency, fuelType, doorsNumber, status)
+    public CarFactory(Guid chassisNumber, DateOnly manufacturingDate, string name, string plateNumber, double value,
+        string color, double potency, FuelType fuelType, VehicleStatus status,
+        long buyerId = 0, int doorsNumber = 0) :
+        base(chassisNumber, manufacturingDate, name, plateNumber, value, color, potency, fuelType,
+            status, buyerId, doorsNumber)
     {
     }
+    
 }

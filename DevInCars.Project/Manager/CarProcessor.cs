@@ -3,21 +3,23 @@ using DevInCars.Project.Domain.Base;
 using DevInCars.Project.Manager.Processors.Base;
 using DevInCars.Project.Manager.Processors.Interfaces;
 
+
 namespace DevInCars.Project.Manager;
 
 public class CarProcessor : ProcessorBase<CarFactory>, IVehicleProcessor
 {
-    public static VehicleManufactorInfo CreateCar1(VehicleFactoryBase constructor)
+    public   VehicleManufactorInfo CreateCarAuth(VehicleFactoryBase constructor)
     {
-        var carro = constructor;
+        var createCar = ValidateVehicleType(constructor);
 
-        return new VehicleManufactorInfo(constructor);
+        
+        return Car(createCar);
     }
-
-
-    public VehicleManufactorInfo CreateCar(VehicleFactoryBase constructor)
+    
+    private static VehicleManufactorInfo Car (CarFactory carFactory)
     {
-        throw new NotImplementedException();
+        return new VehicleManufactorInfo(carFactory);
+
     }
 }
 

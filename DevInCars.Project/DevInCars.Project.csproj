@@ -9,6 +9,12 @@
 
     <ItemGroup>
       <Compile Remove="Domain\Enum\OperationType.cs" />
+      <Compile Remove="Domain\Enum\NumberOfDoors.cs" />
+      <Compile Remove="Domain\Database.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Lib.DevInCars.Data\Lib.DevInCars.Data.csproj" />
     </ItemGroup>
 
 </Project>

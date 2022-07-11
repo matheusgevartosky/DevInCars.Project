@@ -1,17 +1,16 @@
-﻿using DevInCars.Project.Domain.Base;
-using DevInCars.Project.Domain.Enum;
+﻿using DevInCars.Project.Database;
+using DevInCars.Project.Domain.Base;
+
 
 namespace DevInCars.Project.Domain;
 
 public class VehicleManufactorInfo
 
 {
-    public VehicleManufactorInfo(VehicleFactoryBase vehicle )
+    public VehicleFactoryBase Vehicle { get; }
+
+    public VehicleManufactorInfo(VehicleFactoryBase vehicle)
     {
         Vehicle = vehicle;
-        
     }
-
-    public VehicleFactoryBase Vehicle { get; }
-    
 }

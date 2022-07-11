@@ -4,8 +4,22 @@ namespace DevInCars.Project.Domain.Base;
 
 public abstract class VehicleFactoryBase
 {
+    public Guid ChassisNumber { get; set; }
+    public DateOnly ManufacturingDate { get; }
+    public string Name { get; }
+    public string PlateNumber { get; }
+    public double Value { get;  }
+    public long BuyerId { get; }
+    public string Color { get;  }
+    public double Potency { get; }
+    public FuelType FuelType { get; }
+    public int DoorsNumber { get; }
+    public VehicleStatus Status { get; }
+
+    
     protected VehicleFactoryBase(Guid chassisNumber, DateOnly manufacturingDate, string name, string plateNumber,
-        double value, long buyerId, string color, double potency, FuelType fuelType, int? doorsNumber, VehicleStatus status)
+        double value, string color, double potency, FuelType fuelType,
+        VehicleStatus status, long buyerId , int doorsNumber )
     {
         ChassisNumber = chassisNumber;
         ManufacturingDate = manufacturingDate;
@@ -19,18 +33,6 @@ public abstract class VehicleFactoryBase
         DoorsNumber = doorsNumber;
         Status = status;
     }
-
-    public Guid ChassisNumber { get; }
-    public DateOnly ManufacturingDate { get; }
-    public string Name { get; }
-    public string PlateNumber { get; }
-    public double Value { get; }
-    public long BuyerId { get; }
-    public string Color { get; }
-
-    public double Potency { get; }
-    public FuelType FuelType { get; }
-    public int? DoorsNumber { get; }
     
-    public VehicleStatus Status { get; } 
+
 }
