@@ -11,7 +11,7 @@ public class VehicleProcessorFactory
         {
             case VehicleType.Carro: return new CarProcessor();
 
-            default: throw new Exception("nada");
+            default: throw new ArgumentException("nada");
         }
     }
 }

@@ -7,4 +7,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Compile Remove="Domain\Enum\OperationType.cs" />
+    </ItemGroup>
+
 </Project>
