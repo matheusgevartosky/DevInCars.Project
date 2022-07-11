@@ -5,7 +5,7 @@ namespace DevInCars.Project.Domain.Base;
 public abstract class VehicleFactoryBase
 {
     protected VehicleFactoryBase(Guid chassisNumber, DateOnly manufacturingDate, string name, string plateNumber,
-        double value, long buyerId, string color, float potency, FuelType fuelType, int? doorsNumber)
+        double value, long buyerId, string color, double potency, FuelType fuelType, int? doorsNumber, VehicleStatus status)
     {
         ChassisNumber = chassisNumber;
         ManufacturingDate = manufacturingDate;
@@ -17,6 +17,7 @@ public abstract class VehicleFactoryBase
         Potency = potency;
         FuelType = fuelType;
         DoorsNumber = doorsNumber;
+        Status = status;
     }
 
     public Guid ChassisNumber { get; }
@@ -27,7 +28,9 @@ public abstract class VehicleFactoryBase
     public long BuyerId { get; }
     public string Color { get; }
 
-    public float Potency { get; }
+    public double Potency { get; }
     public FuelType FuelType { get; }
     public int? DoorsNumber { get; }
+    
+    public VehicleStatus Status { get; } 
 }

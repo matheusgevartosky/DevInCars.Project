@@ -6,12 +6,12 @@ namespace DevInCars.Project.Domain;
 public class VehicleManufactorInfo
 
 {
-    public VehicleManufactorInfo(VehicleFactoryBase vehicle, VehicleStatus status)
+    public VehicleManufactorInfo(VehicleFactoryBase vehicle )
     {
         Vehicle = vehicle;
-        Status = status;
+        
     }
 
     public VehicleFactoryBase Vehicle { get; }
-    public VehicleStatus Status { get; }
+    
 }

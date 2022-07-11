@@ -7,9 +7,17 @@ namespace DevInCars.Project.Manager;
 
 public class CarProcessor : ProcessorBase<CarFactory>, IVehicleProcessor
 {
-    public VehicleManufactorInfo Constructor(VehicleFactoryBase constructor)
+    public static VehicleManufactorInfo CreateCar1(VehicleFactoryBase constructor)
     {
-        throw new NotImplementedException("Erro");
+        var carro = constructor;
+
+        return new VehicleManufactorInfo(constructor);
+    }
+
+
+    public VehicleManufactorInfo CreateCar(VehicleFactoryBase constructor)
+    {
+        throw new NotImplementedException();
     }
 }
-    
+
