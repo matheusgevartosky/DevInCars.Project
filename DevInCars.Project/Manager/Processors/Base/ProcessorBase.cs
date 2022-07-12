@@ -11,8 +11,7 @@ public abstract class ProcessorBase<T> where T : VehicleFactoryBase
     {
         if (!(vehicle is T)) throw new ArgumentException("Tipo de veiculo inválido!");
         
-        var teste = new DataBase();
-        teste.AddItem((CarFactory)vehicle);
+        DataBase.AddItem((CarFactory)vehicle);
         return (T)vehicle;
     }
 }

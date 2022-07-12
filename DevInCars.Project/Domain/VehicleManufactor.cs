@@ -4,12 +4,12 @@ using DevInCars.Project.Domain.Base;
 
 namespace DevInCars.Project.Domain;
 
-public class VehicleManufactorInfo
+public class VehicleManufactor
 
 {
     public VehicleFactoryBase Vehicle { get; }
 
-    public VehicleManufactorInfo(VehicleFactoryBase vehicle)
+    public VehicleManufactor(VehicleFactoryBase vehicle)
     {
         Vehicle = vehicle;
     }

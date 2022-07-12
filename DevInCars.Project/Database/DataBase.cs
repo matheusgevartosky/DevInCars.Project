@@ -1,24 +1,23 @@
 ﻿
-
-using DevInCars.Project.Domain;
 using DevInCars.Project.Domain.Base;
 
 namespace DevInCars.Project.Database;
 
 public class DataBase
 {
-    public List<CarFactory> Data = new List<CarFactory>();
+    public static List<VehicleFactoryBase> Data = new List<VehicleFactoryBase>();
 
-    public void AddItem(CarFactory item)
+    public static void AddItem(VehicleFactoryBase item)
     {
          Data.Add(item);
     }
 
-    public void PrintData()
+    public static void PrintData()
     {
         foreach (var item in Data)
         {
-            Console.WriteLine($"{item.ChassisNumber}");
+            Console.WriteLine($"{item.Name} {item.Potency} {item.ChassisNumber}");
+            
         }
     }
 }
