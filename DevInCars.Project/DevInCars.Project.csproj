@@ -11,10 +11,11 @@
       <Compile Remove="Domain\Enum\OperationType.cs" />
       <Compile Remove="Domain\Enum\NumberOfDoors.cs" />
       <Compile Remove="Domain\Database.cs" />
+      <Compile Remove="Manager\Processors\Interfaces\IVehicle.cs" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Lib.DevInCars.Data\Lib.DevInCars.Data.csproj" />
+      
     </ItemGroup>
 
 </Project>

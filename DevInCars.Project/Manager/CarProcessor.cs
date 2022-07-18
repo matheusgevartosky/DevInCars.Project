@@ -8,9 +8,9 @@ namespace DevInCars.Project.Manager;
 
 public class CarProcessor : ProcessorBase<CarFactory>, IVehicleProcessor
 {
-    public VehicleFactoryBase CreateVehicle(VehicleFactoryBase constructor)
+    public VehicleFactoryBase CreateVehicle(VehicleFactoryBase vehicle)
     {
-        var createdCar = ValidateVehicleType(constructor);
+        var createdCar = ValidateVehicleType(vehicle);
         
         return createdCar;
     }

@@ -5,5 +5,6 @@ namespace DevInCars.Project.Manager.Processors.Interfaces;
 
 public interface IVehicleProcessor
 {
-       public VehicleFactoryBase CreateVehicle(VehicleFactoryBase constructor);
+       
+       public VehicleFactoryBase CreateVehicle(VehicleFactoryBase vehicle);
 }
