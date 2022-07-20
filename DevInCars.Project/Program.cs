@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using DevInCars.Project.Domain;
 using DevInCars.Project.Domain.Enum;
+using DevInCars.Project.Domain.UI;
 using DevInCars.Project.Manager;
 using DevInCars.Project.Manager.Factory;
 using static DevInCars.Project.Dapper.Services;
@@ -17,7 +18,7 @@ internal class Program
         var carData = vehicleFactoryBase;
         
         var createCar = VehicleProcessorFactory.CreateVehicleProcessor(vehicleType: VehicleType.Carro);
-        createCar.CreateVehicle(carData);*/
+        createCar.CreateVehicle(carData);
 
         var teste = ListAll();
         var tt2 = teste.Max(x => x.Value);
@@ -28,6 +29,9 @@ internal class Program
         foreach (var item in teste)
         {
             Console.WriteLine($"{item.Name} {item.Type}");
-        }
+        }*/
+        
+        Menu.MainMenu();
+        
     }
 }
