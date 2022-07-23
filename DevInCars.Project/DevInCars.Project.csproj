@@ -12,10 +12,8 @@
       <Compile Remove="Domain\Enum\NumberOfDoors.cs" />
       <Compile Remove="Domain\Database.cs" />
       <Compile Remove="Manager\Processors\Interfaces\IVehicle.cs" />
-    </ItemGroup>
-
-    <ItemGroup>
-      
+      <Compile Remove="Domain\Enum\EMainOptions.cs" />
+      <Compile Remove="Exceptions\InpuException.cs" />
     </ItemGroup>
 
 </Project>
