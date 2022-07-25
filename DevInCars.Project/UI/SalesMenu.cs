@@ -122,11 +122,14 @@ public static class SalesMenu
                             try
                             {
                                 var dataSales = Services.ListAllSoldedVehicles();
-                                var max = dataSales.Max(x => x.Vehicle.Value);
+                                var max = dataSales.MaxBy(x => x.Vehicle.Value);
                                 
                                 if (dataSales.Count != 0)
                                 {
-                                    Console.WriteLine($" O Maioroooo Valor foi de : {max} \n");
+                                    Console.WriteLine($" Modelo: {max.Vehicle.Name} \n" +
+                                                      $" Cpf do Comprador: {max.BuyerId}\n" +
+                                                      $" Data da Venda: {max.SaleDate} \n" +
+                                                      $" Valor do veículo {max.SaleValue}\n");
 
                                 }
                                 else
@@ -150,11 +153,13 @@ public static class SalesMenu
                             try
                             {
                                 var dataSales = Services.ListAllSoldedVehicles();
-                                var min = dataSales.Min(x => x.Vehicle.Value);
+                                var min = dataSales.MinBy(x => x.Vehicle.Value);
                                 if (dataSales.Count != 0)
                                 {
-                                    Console.WriteLine($" O Menor Valor Foi De: {min} \n");
-
+                                    Console.WriteLine($" Modelo: {min.Vehicle.Name} \n" +
+                                                      $" Cpf do Comprador: {min.BuyerId}\n" +
+                                                      $" Data da Venda: {min.SaleDate} \n" +
+                                                      $" Valor do veículo {min.SaleValue}\n");
                                 }
                                 else
                                 {
