@@ -55,11 +55,11 @@ public static class EditVehicleMenu
                             break;
                         case 2:
                             Console.Clear();
-                            Console.WriteLine("\n           ---------- Editar Cor cadastrada ----------\n");
+                            Console.WriteLine("\n           ---------- Editar Valor cadastrada ----------\n");
                             Console.Write("Digite o id do veiculo que deseja alterar a cor: ");
                             var id2 = int.Parse(Console.ReadLine() ?? throw new InputException(
                                 "Valor digitado incorreto ou inexistente. Tente Novamente"));
-                            Console.Write("Digite a nova cor: ");
+                            Console.Write("Digite o Novo valor: ");
                             var valor = int.Parse(Console.ReadLine());
                             var dataVAlue = Services.ListVehicleById(id2);
                             if (dataVAlue == null)
