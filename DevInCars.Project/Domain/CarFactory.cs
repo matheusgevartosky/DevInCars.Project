@@ -7,7 +7,7 @@ public class CarFactory : VehicleFactoryBase
 {
     public CarFactory(Guid chassisNumber, DateOnly manufacturingDate, string name, string plateNumber, double value,
         string color, double potency, FuelType fuelType, VehicleStatus status, int id, VehicleType type,
-        long buyerId = 0, int doorsNumber = 0) :
+        string? buyerId, int doorsNumber = 0) :
         base(chassisNumber, manufacturingDate, name, plateNumber, value, color, potency, fuelType,
             status, id,type, buyerId, doorsNumber)
     {

@@ -14,6 +14,15 @@
       <Compile Remove="Manager\Processors\Interfaces\IVehicle.cs" />
       <Compile Remove="Domain\Enum\EMainOptions.cs" />
       <Compile Remove="Exceptions\InpuException.cs" />
+      <Compile Remove="Domain\UI\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Domain\UI\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Domain\UI\**" />
     </ItemGroup>
 
 </Project>

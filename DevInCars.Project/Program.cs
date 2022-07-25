@@ -8,39 +8,19 @@ internal class Program
 {
     private static void Main()
     {
-        /* var vehicleFactoryBase = new CarFactory(Guid.NewGuid(), new DateOnly(2022, 07, 23), "Punto", "xxx1234", 30.000,
-            "Prata",
-            1.6, FuelType.Gasolina, VehicleStatus.Disponivel,DataBase.Data.Count +1 , 40926280805, 4);
-        var carData = vehicleFactoryBase;
-        
-        var createCar = VehicleProcessorFactory.CreateVehicleProcessor(vehicleType: VehicleType.Carro);
-        createCar.CreateVehicle(carData);
-
-        var teste = ListAll();
-        var tt2 = teste.Max(x => x.Value);
-        var t3 = teste.Min(x => x.Value);
-
-        Console.WriteLine($"maior: {tt2}\n menor:;{t3}");
-
-        foreach (var item in teste)
-        {
-            Console.WriteLine($"{item.Name} {item.Type}");
-        }
-    }*/
-        Console.Clear();
-        Console.WriteLine("\n                        ---------Seja Bem Vindo Ao DevInCars!----------\n\n");
         var system = true;
         while (system)
         {
             try
             {
-                
-                Console.WriteLine( 
-                                  "Selecione uma opção:\n" +
-                                  "1 - Listas de Veículos Cadastrados" +
-                                  "2 - Vender Veiculos" +
-                                  "3 - Editar um Veículo cadastrado" +
-                                  "4 - Sair");
+                Console.Clear();
+                Console.WriteLine("\n                        ---------Seja Bem Vindo Ao DevInCars!----------\n\n");
+                Console.WriteLine(
+                    " Selecione uma opção:\n\n" +
+                    " 1 - Listas de Veículos Cadastrados\n" +
+                    " 2 - Vender Veiculos\n" +
+                    " 3 - Editar um Veículo cadastrado\n" +
+                    " 4 - Sair\n\n");
                 Console.Write("Digite a opção escolhida (apenas o número):  ");
                 var op = Console.ReadLine();
 
@@ -54,10 +34,12 @@ internal class Program
                             Menu.ListsMenu();
                             break;
                         case 2:
+                            SalesMenu.Sales();
                             break;
                         case 3:
                             break;
                         case 4:
+                            Console.WriteLine("Finalizando  o sistema...");
                             system = false;
                             return;
 
@@ -69,7 +51,6 @@ internal class Program
                 {
                     throw new InputException("A opção digitada não existe ou é inválida! Escolha novamente");
                 }
-
             }
             catch
                 (Exception e)
@@ -79,4 +60,3 @@ internal class Program
         }
     }
 }
-

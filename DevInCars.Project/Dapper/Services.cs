@@ -1,5 +1,7 @@
 ﻿using DevInCars.Project.Domain.Base;
+using DevInCars.Project.Domain.Entities;
 using DevInCars.Project.Domain.Enum;
+using DevInCars.Project.Exceptions;
 
 namespace DevInCars.Project.Dapper;
 
@@ -29,16 +31,54 @@ public class Services
 
         return null;
     }
+    
+    
 
-    public static List<VehicleFactoryBase> ListAllAvailableVehicles()
+    public static VehicleFactoryBase? ListVehicleById(int id)
     {
-        var availableVehicles = DataBase.Data.FindAll(x => x.Status == VehicleStatus.Disponivel);
-        return availableVehicles;
+        try
+        {
+        var vehicleById = DataBase.Data.FirstOrDefault(x=>x.Id == id) ;
+        if (vehicleById != null)
+        {
+            return vehicleById;
+        }
+
+        throw new InputException("Nenhum registro encontrado com o id informado. Tente Novamente.");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            
+        }
+        return null;
     }
 
-    public static List<VehicleFactoryBase> ListAllSoldVehicles()
+
+    public static List<VehicleFactoryBase> getVehicleByStatus()
     {
-        var soldVehicles = DataBase.Data.FindAll(x => x.Status == VehicleStatus.Vendido);
-        return soldVehicles;
+        try
+        {
+            List<VehicleFactoryBase> Avaliable = DataBase.Data.FindAll(x => x.Status == VehicleStatus.Disponivel);
+            {
+                return Avaliable;
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
-}
+
+    public static void AddNewSale(Sales param)
+    {
+        DataBase.SalesData.Add(param);
+    }
+
+    public static List<Sales> ListAllSoldedVehicles()
+    {
+        return DataBase.SalesData;
+    }
+
+}   
