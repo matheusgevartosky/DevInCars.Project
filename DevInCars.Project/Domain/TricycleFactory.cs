@@ -1,0 +1,18 @@
+﻿using DevInCars.Project.Domain.Base;
+using DevInCars.Project.Domain.Enum;
+
+namespace DevInCars.Project.Domain;
+
+public class TricycleFactory : VehicleFactoryBase
+{
+    public TricycleFactory(Guid chassisNumber, DateOnly manufacturingDate, string name, string plateNumber, 
+        double value, string color, double potency, FuelType fuelType, VehicleStatus status, int id, VehicleType type, 
+        string? buyerId, int doorsNumber = 0) : base(chassisNumber, manufacturingDate, name, plateNumber, value, color, 
+        potency, fuelType, status, id, type, buyerId, doorsNumber)
+    {
+    }
+    public override string ToString()
+    {
+        return $"Modelo: {Name}\n Placa: {PlateNumber}\n Valor: {Value}  ";
+    }
+}

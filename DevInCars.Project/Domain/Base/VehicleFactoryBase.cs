@@ -8,9 +8,9 @@ public abstract class VehicleFactoryBase
     public DateOnly ManufacturingDate { get; }
     public string Name { get; }
     public string PlateNumber { get; }
-    public double Value { get; }
+    public double Value { get; set; }
     public string? BuyerId { get; set; }
-    public string Color { get; }
+    public string Color { get; set; }
     public double Potency { get; }
     public FuelType FuelType { get; }
     public int DoorsNumber { get; }

@@ -10,8 +10,9 @@ public class VehicleProcessorFactory
         switch (vehicleType)
         {
             case VehicleType.Carro: return new CarProcessor();
+            case VehicleType.Caminhonete: return new TruckProcessor();
 
-            default: throw new ArgumentException("nada");
+            default: throw new ArgumentException("Não Cadastrado");
         }
     }
 } 

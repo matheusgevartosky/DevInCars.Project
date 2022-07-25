@@ -37,6 +37,7 @@ internal class Program
                             SalesMenu.Sales();
                             break;
                         case 3:
+                            EditVehicleMenu.Edit();
                             break;
                         case 4:
                             Console.WriteLine("Finalizando  o sistema...");

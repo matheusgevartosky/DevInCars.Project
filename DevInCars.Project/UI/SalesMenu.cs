@@ -41,7 +41,7 @@ public static class SalesMenu
 
                             Console.Write("Digite o id do veículo que será vendido: ");
                             var input = int.Parse(Console.ReadLine() ?? throw new InputException(
-                                "Valor digitado incorreto ou inexistente. Tente Novamente"));
+                                "Valor digitado incorreto ou inexistente. Tente Novamente"));;
 
                             VehicleFactoryBase? data = Services.ListVehicleById(input);
                             var cpf = Helpers.CpfValidator();

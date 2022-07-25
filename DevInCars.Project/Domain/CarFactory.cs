@@ -12,4 +12,9 @@ public class CarFactory : VehicleFactoryBase
             status, id,type, buyerId, doorsNumber)
     {
     }
+
+    public override string ToString()
+    {
+        return $"Modelo: {Name}\n Placa: {PlateNumber}\n Valor: {Value}  ";
+    }
 }
